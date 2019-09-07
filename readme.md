@@ -2,5 +2,9 @@
 <p>В роли бекенда выступает laravel</p>
 <h2>Установка</h2>
 <ol>
-    <li></li>
+    <li>https://github.com/Ayurka/react-crud.git</li>
+    <li>composer install</li>
+    <li>Делаем копию .env.example в .env и указываем необходимые настройки бд</li>
+    <li>php artisan migrate</li>
+    <li>npm install</li>
 </ol>
