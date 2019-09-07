@@ -18,8 +18,8 @@ class CreateTasksTable extends Migration
             $table->string('name');
             $table->string('status');
             $table->string('priority');
-            $table->date('date_end');
-            $table->date('date_actual');
+            $table->date('date_end')->nullable();
+            $table->date('date_actual')->nullable();
         });
     }
 

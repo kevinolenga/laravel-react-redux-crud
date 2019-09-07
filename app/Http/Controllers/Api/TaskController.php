@@ -7,7 +7,6 @@ use App\Http\Resources\TaskCollection;
 use App\Http\Resources\TaskResource;
 use App\Models\Task;
 use App\Http\Controllers\Controller;
-use Carbon\Carbon;
 use Illuminate\Http\Response;
 
 class TaskController extends Controller
@@ -32,12 +31,11 @@ class TaskController extends Controller
      */
     public function store(TaskRequest $request, Task $task)
     {
-        //dd($request->all());
         return new TaskResource($task->create([
             'name' => $request->get('name'),
             'status' => $request->get('status'),
             'priority' => $request->get('priority'),
-            'date_end' => $request->get('date_end'),
+            'date_end' => ($request->get('date_end') == '') ? date('Y-m-d') : $request->get('date_end'),
             'date_actual' => null
         ]));
     }
