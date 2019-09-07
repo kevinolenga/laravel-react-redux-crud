@@ -8,3 +8,4 @@
     <li>php artisan migrate</li>
     <li>npm install</li>
 </ol>
+<p>React находится в resources\js</p>
